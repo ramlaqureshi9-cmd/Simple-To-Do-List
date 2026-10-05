@@ -2,8 +2,11 @@ tasks = []
 
 def add_task():
     task = input("Enter a task: ")
-    tasks.append(task)
-    print("Task added!")
+    if task.strip():
+        tasks.append(task)
+        print("Task added!")
+    else:
+        print("Task cannot be empty.")
 
 def show_tasks():
     print("\nTasks:")
