@@ -7,8 +7,11 @@ def add_task():
 
 def show_tasks():
     print("\nTasks:")
-    for task in tasks:
-        print("-", task)
+    if tasks:
+        for task in tasks:
+            print("-", task)
+    else:
+        print("No tasks available.")
 
 while True:
     print("\n1. Add Task")
